@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Villa Lijó Suítes | Guia Digital</title>
+<style>
+:root{--bg:#10251f;--panel:#19352d;--panel2:#23463a;--cream:#f4f0e6;--muted:#c2c9bf;--gold:#c6a66b;--line:#456154}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+body{background:radial-gradient(ellipse at 85% 10%,#2b5140 0,transparent 42%),linear-gradient(140deg,#10251f,#142e26 60%,#0c1d18);font-size:18px}
+button{font:inherit}
+.shell{min-height:100vh;display:flex;flex-direction:column;padding:3.2vh 4vw 2vh;max-width:1600px;margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:20px}
+.brand{display:flex;align-items:center;gap:16px}
+.mark{width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:27px}
+.brandname{font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,2.2vw,38px);letter-spacing:.03em}
+.subtitle{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.topright{text-align:right;color:var(--muted);font-size:15px;line-height:1.6}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:4vw;align-items:center;padding:3vh 0}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.2em;font-size:14px;font-weight:bold}
+h1{font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:clamp(38px,4.4vw,72px);line-height:1.05;margin:18px 0}
+.lead{font-size:clamp(18px,1.45vw,24px);line-height:1.55;color:#d9dfd6;max-width:700px}
+.suite{margin-top:28px;padding:17px 20px;border-left:3px solid var(--gold);background:#ffffff08;max-width:520px}
+.suite small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-size:12px;margin-bottom:6px}
+.suite strong{font-family:Georgia,serif;font-size:25px;font-weight:normal}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{min-height:118px;text-align:left;border:1px solid #476457;background:linear-gradient(135deg,#1b392f,#173128);color:var(--cream);padding:20px;border-radius:8px;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.tile:hover,.tile:focus-visible,.tile.active{outline:3px solid var(--gold);outline-offset:2px;background:var(--panel2);border-color:var(--gold)}
+.tile .ico{display:block;font-size:24px;color:var(--gold);margin-bottom:12px}
+.tile strong{font-size:clamp(17px,1.35vw,22px);font-weight:600;display:block}
+.tile span:last-child{display:block;color:var(--muted);font-size:14px;margin-top:6px}
+footer{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}
+footer b{color:var(--gold);font-weight:normal}
+.dialog{position:fixed;inset:0;background:#06130fdd;display:none;align-items:center;justify-content:center;padding:5vh 5vw;z-index:5}
+.dialog.open{display:flex}
+.dialogbox{width:min(980px,100%);max-height:90vh;overflow:auto;background:#173329;border:1px solid var(--gold);border-radius:10px;padding:clamp(24px,4vw,52px);box-shadow:0 20px 80px #0008}
+.dialoghead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.dialog h2{font:normal clamp(30px,3vw,46px) Georgia,serif;margin:0 0 20px}
+.close{background:transparent;border:1px solid var(--gold);color:var(--cream);border-radius:5px;padding:10px 16px;cursor:pointer}
+.content{font-size:clamp(17px,1.4vw,22px);line-height:1.65;color:#e0e5dc}
+.content ul{padding-left:1.2em}.content li{margin:.45em 0}
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.info{background:#ffffff08;border:1px solid #3d5b4d;border-radius:6px;padding:18px}
+.info small{display:block;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
+.info strong{font-size:22px}
+.keyhelp{color:var(--muted);font-size:13px;margin-top:15px}
+@media(max-width:850px){main{grid-template-columns:1fr;gap:28px}.shell{padding:22px}.topright{display:none}.menu{grid-template-columns:1fr 1fr}.tile{min-height:100px}.lead{max-width:none}}
+@media(max-width:500px){.menu{grid-template-columns:1fr}.brandname{font-size:24px}.subtitle{font-size:10px}.mark{width:44px;height:44px}.info-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:5px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+  <div class="brand"><div class="mark" aria-hidden="true">L</div><div><div class="brandname">Villa Lijó Suítes</div><div class="subtitle">Gerês · Portugal</div></div></div>
+  <div class="topright">Bem-vindo ao Gerês<br><span id="clock"></span></div>
+</header>
+<main>
+<section>
+  <div class="eyebrow">A sua estadia, ao seu ritmo</div>
+  <h1>Bem-vindo<br>à Villa Lijó.</h1>
+  <p class="lead">Desfrute da tranquilidade da serra, da paisagem da Albufeira da Caniçada e de cada momento da sua estadia. Consulte aqui as informações úteis da casa.</p>
+  <div class="suite"><small>A sua suíte</small><strong id="suiteName">Villa Lijó Suítes</strong></div>
+</section>
+<section>
+  <div class="menu" role="navigation" aria-label="Guia digital">
+    <button class="tile" data-page="welcome"><span class="ico">✦</span><strong>Informações úteis</strong><span>Horários e serviços</span></button>
+    <button class="tile" data-page="breakfast"><span class="ico">☕</span><strong>Pequeno-almoço</strong><span>Comece bem o dia</span></button>
+    <button class="tile" data-page="pool"><span class="ico">≈</span><strong>Piscina</strong><span>Horário e segurança</span></button>
+    <button class="tile" data-page="wifi"><span class="ico">⌁</span><strong>Wi-Fi</strong><span>Ligue-se à internet</span></button>
+    <button class="tile" data-page="house"><span class="ico">⌂</span><strong>Regras da casa</strong><span>Para o conforto de todos</span></button>
+    <button class="tile" data-page="geres"><span class="ico">⌁</span><strong>Descobrir o Gerês</strong><span>Natureza e experiências</span></button>
+  </div>
+  <div class="keyhelp">Utilize as setas do comando para navegar e OK para selecionar. Prima ESC ou Voltar para fechar uma janela.</div>
+</section>
+</main>
+<footer><span>Villa Lijó Suítes · Rio Caldo, Terras de Bouro</span><span><b>Momentos de tranquilidade, em plena natureza</b></span></footer>
+</div>
+<div class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+ <div class="dialogbox">
+  <div class="dialoghead"><h2 id="dialogTitle">Informações úteis</h2><button class="close" id="closeBtn" aria-label="Fechar">Fechar ✕</button></div>
+  <div class="content" id="dialogContent"></div>
+  <div class="keyhelp">Prima Fechar, ESC ou a tecla Voltar do comando para regressar ao menu.</div>
+ </div>
+</div>
+<script>
+const pages = {
+welcome:{title:"Informações úteis",html:`<div class="info-grid">
+<div class="info"><small>Check-in</small><strong>15:00</strong></div>
+<div class="info"><small>Check-out</small><strong>11:00</strong></div>
+<div class="info"><small>Estacionamento</small><strong>Privado</strong></div>
+<div class="info"><small>Carregamento elétrico</small><strong>Disponível</strong></div>
+</div><p>Se precisar de ajuda durante a estadia, contacte a equipa da Villa Lijó Suítes através dos contactos fornecidos na sua reserva.</p>`},
+breakfast:{title:"Pequeno-almoço",html:`<div class="info-grid"><div class="info"><small>Horário</small><strong>08:00–10:00</strong></div><div class="info"><small>Local</small><strong>Sala de pequenos-almoços</strong></div></div><p>Desfrute de um início de dia tranquilo antes de explorar o Gerês. Para pedidos especiais ou informações sobre alergénios, fale com a nossa equipa.</p>`},
+pool:{title:"Piscina",html:`<div class="info-grid"><div class="info"><small>Horário</small><strong>08:00–20:00</strong></div><div class="info"><small>Utilização</small><strong>Por sua conta e risco</strong></div></div><ul><li>As crianças devem estar sempre acompanhadas e sob vigilância de um adulto.</li><li>Não corra nem mergulhe em zonas de pouca profundidade.</li><li>Não são permitidos recipientes de vidro na zona da piscina.</li><li>Respeite o descanso dos restantes hóspedes e mantenha a área limpa.</li></ul>`},
+wifi:{title:"Wi-Fi",html:`<p>Os dados da rede Wi-Fi devem ser disponibilizados pelo alojamento no momento do check-in.</p><div class="info-grid"><div class="info"><small>Rede</small><strong>Consulte a informação de boas-vindas</strong></div><div class="info"><small>Palavra-passe</small><strong>Consulte a informação de boas-vindas</strong></div></div><p>Por segurança, os dados de acesso não estão incluídos nesta versão de demonstração. Podem ser inseridos na configuração final.</p>`},
+house:{title:"Regras da casa",html:`<ul><li><b>Silêncio:</b> entre as 22:00 e as 08:00.</li><li><b>Festas e eventos:</b> não são permitidos.</li><li><b>Fumo:</b> apenas no exterior.</li><li><b>Animais:</b> não são permitidos.</li><li>Respeite os outros hóspedes, os espaços comuns e o equipamento.</li><li>Ao sair, confirme que deixou portas e janelas devidamente fechadas.</li></ul>`},
+geres:{title:"Descobrir o Gerês",html:`<p>A Villa Lijó Suítes fica em Rio Caldo, numa região marcada pela serra, pela água e pelas aldeias tradicionais.</p><ul><li><b>Albufeira da Caniçada:</b> paisagens, passeios e atividades na água.</li><li><b>Parque Nacional da Peneda-Gerês:</b> trilhos e contacto com a natureza; confirme previamente o estado e a dificuldade dos percursos.</li><li><b>São Bento da Porta Aberta:</b> um dos locais de visita mais conhecidos da região.</li><li><b>Aldeias e gastronomia:</b> descubra os sabores e o património local.</li></ul><p>Planeie as visitas com atenção às condições meteorológicas, à sinalização e às regras de conservação da natureza.</p>`}
+};
+const dialog=document.getElementById('dialog'), title=document.getElementById('dialogTitle'), content=document.getElementById('dialogContent'), closeBtn=document.getElementById('closeBtn');
+let lastFocus=null;
+function openPage(key,btn){lastFocus=btn||document.activeElement;title.textContent=pages[key].title;content.innerHTML=pages[key].html;dialog.classList.add('open');closeBtn.focus();}
+function closePage(){dialog.classList.remove('open');if(lastFocus)lastFocus.focus();}
+document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>openPage(btn.dataset.page,btn)));
+closeBtn.addEventListener('click',closePage);
+dialog.addEventListener('click',e=>{if(e.target===dialog)closePage()});
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'||e.key==='Backspace'||e.key==='BrowserBack'){if(dialog.classList.contains('open')){e.preventDefault();closePage();}}
+ if(e.key==='Enter' && document.activeElement.classList.contains('tile')) document.activeElement.click();
+});
+function clock(){const now=new Date();document.getElementById('clock').textContent=now.toLocaleDateString('pt-PT',{weekday:'long',day:'numeric',month:'long'})+' · '+now.toLocaleTimeString('pt-PT',{hour:'2-digit',minute:'2-digit'});}
+clock();setInterval(clock,30000);
+// Opcional: identificar a suíte no URL, por exemplo ?suite=PONTE
+const suite=new URLSearchParams(location.search).get('suite');
+const allowed=['BUSTELO','RAPOSEIRA','FICHEIRA','PONTE','BARCA','ITEIRO','CACHOEIRA','FUNDÕES','ALVITES'];
+if(suite){const match=allowed.find(s=>s.toLowerCase()===suite.toLowerCase());if(match)document.getElementById('suiteName').textContent=match;}
+</script>
+</body>
+</html>
