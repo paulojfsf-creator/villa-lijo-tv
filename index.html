@@ -3,38 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="dark light">
 <title>Villa Lijó Suítes | Guia Digital</title>
 <style>
-:root{--bg:#f5f3ed;--ink:#202a24;--muted:#737970;--accent:#687b66;--line:#deded5;--white:#fffefa;--gold:#aa8d58}
+
+:root{--bg:#17211d;--ink:#fffdf7;--muted:#e0e4dc;--accent:#d6c39a;--line:#ffffff55;--white:#fffefa;--gold:#d6c39a}
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+html,body{margin:0;min-height:100%;background:#17211d;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
 body{font-size:18px;letter-spacing:.005em}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,rgba(13,24,19,.86) 0%,rgba(13,24,19,.66) 42%,rgba(13,24,19,.35) 100%),linear-gradient(0deg,rgba(10,18,14,.56),transparent 52%),url("villa-lijo-geres.png") center center/cover no-repeat;z-index:0}
 button{font:inherit}
-.shell{min-height:100vh;max-width:1700px;margin:auto;padding:3.6vh 5vw 2.4vh;display:flex;flex-direction:column}
-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 22px;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:14px}.mark{display:none}.brandname{font-family:Georgia,'Times New Roman',serif;font-size:clamp(23px,2vw,34px);font-weight:normal;letter-spacing:-.035em}.subtitle{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:7px}
-.topright{text-align:right;color:var(--muted);font-size:14px;line-height:1.8}.topright #clock{text-transform:capitalize}
-main{flex:1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(400px,.92fr);gap:7vw;align-items:center;padding:5vh 0 4vh}
-.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:bold}
-h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(48px,5.3vw,84px);line-height:1.02;font-weight:normal;letter-spacing:-.055em;margin:22px 0 24px;max-width:720px}
-.lead{font-size:clamp(17px,1.3vw,21px);line-height:1.7;color:#626b62;max-width:620px;margin:0}
-.suite{margin-top:36px;padding:0;border:0;background:none;display:flex;align-items:center;gap:16px}.suite:before{content:"";height:34px;width:2px;background:var(--gold);display:block}.suite small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.17em;font-size:10px;margin-bottom:5px}.suite strong{font-family:Georgia,serif;font-size:22px;font-weight:normal;letter-spacing:.01em}
-.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:0;border-top:1px solid var(--line)}
-.tile{position:relative;min-height:94px;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);padding:20px 28px 20px 2px;cursor:pointer;transition:background .15s,border-color .15s}
-.tile:after{content:'↗';position:absolute;right:4px;top:50%;transform:translateY(-50%);color:#9a9f94;font-size:18px;transition:transform .15s,color .15s}
-.tile:hover,.tile:focus-visible,.tile.active{outline:0;background:#ebece4}.tile:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}.tile:hover:after,.tile:focus-visible:after{transform:translate(2px,-50%);color:var(--accent)}
-.tile .ico{display:none}.tile strong{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,1.5vw,23px);font-weight:normal;display:block;letter-spacing:-.02em}.tile span:last-child{display:block;color:var(--muted);font-size:13px;margin-top:7px}
-.keyhelp{color:#8a8f85;font-size:12px;line-height:1.5;margin-top:18px}
-footer{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px;letter-spacing:.02em}footer b{color:var(--accent);font-weight:normal}
-.dialog{position:fixed;inset:0;background:#202a24b8;display:none;align-items:center;justify-content:center;padding:5vh 5vw;z-index:5;backdrop-filter:blur(5px)}.dialog.open{display:flex}
-.dialogbox{width:min(940px,100%);max-height:90vh;overflow:auto;background:var(--bg);border:1px solid #d4d5cb;border-radius:2px;padding:clamp(24px,4vw,52px);box-shadow:0 24px 90px #0002}
-.dialoghead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:22px}.dialog h2{font:normal clamp(30px,3.4vw,48px) Georgia,serif;letter-spacing:-.04em;margin:0}.close{background:transparent;border:1px solid #c9cdc2;color:var(--ink);border-radius:0;padding:10px 16px;cursor:pointer}.close:hover,.close:focus-visible{background:#e7e9df;outline:2px solid var(--accent)}
-.content{font-size:clamp(16px,1.25vw,20px);line-height:1.75;color:#535d53;padding-top:12px}.content ul{padding-left:1.2em}.content li{margin:.5em 0}.content b{color:var(--ink)}
-.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px;margin-top:16px}.info{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:18px 0}.info small{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:10px;margin-bottom:8px}.info strong{font-family:Georgia,serif;font-size:clamp(20px,1.8vw,27px);font-weight:normal;color:var(--ink)}
-@media(max-width:900px){main{grid-template-columns:1fr;gap:34px;padding:5vh 0 3vh}.shell{padding:24px}.topright{display:none}.lead{max-width:700px}.menu{column-gap:18px}.tile{min-height:88px}}
+.shell{position:relative;z-index:1;min-height:100vh;max-width:1800px;margin:auto;padding:4vh 5vw 2.5vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 20px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:14px}.mark{display:none}.brandname{font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,2vw,35px);font-weight:normal;letter-spacing:-.035em}.subtitle{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#e0e4dc;margin-top:7px}
+.topright{text-align:right;color:#e0e4dc;font-size:13px;line-height:1.8}.topright #clock{text-transform:capitalize;color:#fff}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1.03fr) minmax(400px,.97fr);gap:6vw;align-items:center;padding:4vh 0 3vh}
+.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:bold}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(52px,6vw,96px);line-height:.99;font-weight:normal;letter-spacing:-.06em;margin:22px 0 24px;max-width:760px}
+.lead{font-size:clamp(17px,1.25vw,21px);line-height:1.7;color:#f0f1eb;max-width:620px;margin:0}
+.suite{margin-top:34px;padding:0;border:0;background:none;display:flex;align-items:center;gap:16px}.suite:before{content:"";height:38px;width:1px;background:var(--gold);display:block}.suite small{display:block;color:#d8ded4;text-transform:uppercase;letter-spacing:.18em;font-size:10px;margin-bottom:5px}.suite strong{font-family:Georgia,serif;font-size:22px;font-weight:normal;letter-spacing:.01em;color:#fff}
+.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:26px;row-gap:0;border-top:1px solid var(--line);background:rgba(17,29,23,.2);backdrop-filter:blur(4px)}
+.tile{position:relative;min-height:92px;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);padding:19px 26px 18px 2px;cursor:pointer;transition:background .15s,border-color .15s}
+.tile:after{content:'↗';position:absolute;right:3px;top:50%;transform:translateY(-50%);color:#d6c39a;font-size:17px;transition:transform .15s,color .15s}
+.tile:hover,.tile:focus-visible,.tile.active{outline:0;background:rgba(255,255,255,.12)}.tile:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}.tile:hover:after,.tile:focus-visible:after{transform:translate(2px,-50%);color:#fff}
+.tile .ico{display:none}.tile strong{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,1.45vw,23px);font-weight:normal;display:block;letter-spacing:-.02em}.tile span:last-child{display:block;color:#d4dbd1;font-size:12px;margin-top:7px}
+.keyhelp{color:#e0e4dc;font-size:11px;line-height:1.5;margin-top:16px}
+footer{border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;gap:20px;color:#e0e4dc;font-size:11px;letter-spacing:.08em}footer b{color:var(--accent);font-weight:normal}
+.dialog{position:fixed;inset:0;background:#101a15d9;display:none;align-items:center;justify-content:center;padding:5vh 5vw;z-index:5;backdrop-filter:blur(8px)}.dialog.open{display:flex}
+.dialogbox{width:min(940px,100%);max-height:90vh;overflow:auto;background:#f5f3ed;color:#202a24;border:1px solid #d4d5cb;border-radius:2px;padding:clamp(24px,4vw,52px);box-shadow:0 24px 90px #0005}
+.dialoghead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid #deded5;padding-bottom:22px}.dialog h2{font:normal clamp(30px,3.4vw,48px) Georgia,serif;letter-spacing:-.04em;margin:0}.close{background:transparent;border:1px solid #c9cdc2;color:#202a24;border-radius:0;padding:10px 16px;cursor:pointer}.close:hover,.close:focus-visible{background:#e7e9df;outline:2px solid #687b66}
+.content{font-size:clamp(16px,1.25vw,20px);line-height:1.75;color:#535d53;padding-top:12px}.content ul{padding-left:1.2em}.content li{margin:.5em 0}.content b{color:#202a24}
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px;margin-top:16px}.info{background:transparent;border:0;border-bottom:1px solid #deded5;border-radius:0;padding:18px 0}.info small{display:block;color:#687b66;text-transform:uppercase;letter-spacing:.14em;font-size:10px;margin-bottom:8px}.info strong{font-family:Georgia,serif;font-size:clamp(20px,1.8vw,27px);font-weight:normal;color:#202a24}
+@media(max-width:900px){main{grid-template-columns:1fr;gap:30px;padding:4vh 0 3vh}.shell{padding:24px}.topright{display:none}.lead{max-width:700px}.menu{column-gap:18px}.tile{min-height:78px}}
 @media(max-width:540px){.menu{grid-template-columns:1fr}.brandname{font-size:24px}.subtitle{font-size:10px}.info-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:6px}h1{font-size:48px}}
 @media(min-width:1500px){.shell{padding-left:6vw;padding-right:6vw}}
+
 </style>
 </head>
 <body>
