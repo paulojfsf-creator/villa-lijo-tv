@@ -6,7 +6,7 @@ Versão premium do guia digital, com fotografia de destaque e informação para 
 - Pequeno-almoço: 08h30–10h00.
 - Wi-Fi: rede `Villalijosuites`; palavra-passe `Lijo_2026`.
 - Piscina: 08h00–20h00.
-- Ligações externas para meteorologia, notícias, eventos e mapas de restaurantes, cafés e bares da região.
+- Ligações externas para meteorologia atual no canto superior direito e sugestões de restaurantes, cafés e bares em Rio Caldo e na vila do Gerês, notícias, eventos e mapas de restaurantes, cafés e bares da região.
 - Navegação com teclado/comando e seleção da suíte através do URL, por exemplo `?suite=PONTE`.
 
 ## Publicar no GitHub Pages
@@ -19,4 +19,4 @@ Versão premium do guia digital, com fotografia de destaque e informação para 
 A imagem é carregada localmente a partir de `villa-lijo-geres.png`, por isso tem de ser publicada junto do `index.html`.
 
 ## Nota
-A meteorologia, as notícias, a agenda e as localizações abrem páginas externas atualizadas. Não são mostradas como dados em tempo real dentro do próprio painel. Confirme horários de estabelecimentos e datas de eventos nas fontes correspondentes.
+A meteorologia atual no canto superior direito e sugestões de restaurantes, cafés e bares em Rio Caldo e na vila do Gerês, as notícias, a agenda e as localizações abrem páginas externas atualizadas. Não são mostradas como dados em tempo real dentro do próprio painel. Confirme horários de estabelecimentos e datas de eventos nas fontes correspondentes.
