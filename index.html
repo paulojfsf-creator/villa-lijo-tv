@@ -6,48 +6,35 @@
 <meta name="color-scheme" content="dark">
 <title>Villa Lijó Suítes | Guia Digital</title>
 <style>
-:root{--bg:#10251f;--panel:#19352d;--panel2:#23463a;--cream:#f4f0e6;--muted:#c2c9bf;--gold:#c6a66b;--line:#456154}
+:root{--bg:#f5f3ed;--ink:#202a24;--muted:#737970;--accent:#687b66;--line:#deded5;--white:#fffefa;--gold:#aa8d58}
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-body{background:radial-gradient(ellipse at 85% 10%,#2b5140 0,transparent 42%),linear-gradient(140deg,#10251f,#142e26 60%,#0c1d18);font-size:18px}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+body{font-size:18px;letter-spacing:.005em}
 button{font:inherit}
-.shell{min-height:100vh;display:flex;flex-direction:column;padding:3.2vh 4vw 2vh;max-width:1600px;margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:20px}
-.brand{display:flex;align-items:center;gap:16px}
-.mark{width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:27px}
-.brandname{font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,2.2vw,38px);letter-spacing:.03em}
-.subtitle{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:5px}
-.topright{text-align:right;color:var(--muted);font-size:15px;line-height:1.6}
-main{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:4vw;align-items:center;padding:3vh 0}
-.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.2em;font-size:14px;font-weight:bold}
-h1{font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:clamp(38px,4.4vw,72px);line-height:1.05;margin:18px 0}
-.lead{font-size:clamp(18px,1.45vw,24px);line-height:1.55;color:#d9dfd6;max-width:700px}
-.suite{margin-top:28px;padding:17px 20px;border-left:3px solid var(--gold);background:#ffffff08;max-width:520px}
-.suite small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-size:12px;margin-bottom:6px}
-.suite strong{font-family:Georgia,serif;font-size:25px;font-weight:normal}
-.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.tile{min-height:118px;text-align:left;border:1px solid #476457;background:linear-gradient(135deg,#1b392f,#173128);color:var(--cream);padding:20px;border-radius:8px;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
-.tile:hover,.tile:focus-visible,.tile.active{outline:3px solid var(--gold);outline-offset:2px;background:var(--panel2);border-color:var(--gold)}
-.tile .ico{display:block;font-size:24px;color:var(--gold);margin-bottom:12px}
-.tile strong{font-size:clamp(17px,1.35vw,22px);font-weight:600;display:block}
-.tile span:last-child{display:block;color:var(--muted);font-size:14px;margin-top:6px}
-footer{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}
-footer b{color:var(--gold);font-weight:normal}
-.dialog{position:fixed;inset:0;background:#06130fdd;display:none;align-items:center;justify-content:center;padding:5vh 5vw;z-index:5}
-.dialog.open{display:flex}
-.dialogbox{width:min(980px,100%);max-height:90vh;overflow:auto;background:#173329;border:1px solid var(--gold);border-radius:10px;padding:clamp(24px,4vw,52px);box-shadow:0 20px 80px #0008}
-.dialoghead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
-.dialog h2{font:normal clamp(30px,3vw,46px) Georgia,serif;margin:0 0 20px}
-.close{background:transparent;border:1px solid var(--gold);color:var(--cream);border-radius:5px;padding:10px 16px;cursor:pointer}
-.content{font-size:clamp(17px,1.4vw,22px);line-height:1.65;color:#e0e5dc}
-.content ul{padding-left:1.2em}.content li{margin:.45em 0}
-.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
-.info{background:#ffffff08;border:1px solid #3d5b4d;border-radius:6px;padding:18px}
-.info small{display:block;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
-.info strong{font-size:22px}
-.keyhelp{color:var(--muted);font-size:13px;margin-top:15px}
-@media(max-width:850px){main{grid-template-columns:1fr;gap:28px}.shell{padding:22px}.topright{display:none}.menu{grid-template-columns:1fr 1fr}.tile{min-height:100px}.lead{max-width:none}}
-@media(max-width:500px){.menu{grid-template-columns:1fr}.brandname{font-size:24px}.subtitle{font-size:10px}.mark{width:44px;height:44px}.info-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:5px}}
+.shell{min-height:100vh;max-width:1700px;margin:auto;padding:3.6vh 5vw 2.4vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 22px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:14px}.mark{display:none}.brandname{font-family:Georgia,'Times New Roman',serif;font-size:clamp(23px,2vw,34px);font-weight:normal;letter-spacing:-.035em}.subtitle{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.topright{text-align:right;color:var(--muted);font-size:14px;line-height:1.8}.topright #clock{text-transform:capitalize}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(400px,.92fr);gap:7vw;align-items:center;padding:5vh 0 4vh}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:bold}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(48px,5.3vw,84px);line-height:1.02;font-weight:normal;letter-spacing:-.055em;margin:22px 0 24px;max-width:720px}
+.lead{font-size:clamp(17px,1.3vw,21px);line-height:1.7;color:#626b62;max-width:620px;margin:0}
+.suite{margin-top:36px;padding:0;border:0;background:none;display:flex;align-items:center;gap:16px}.suite:before{content:"";height:34px;width:2px;background:var(--gold);display:block}.suite small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.17em;font-size:10px;margin-bottom:5px}.suite strong{font-family:Georgia,serif;font-size:22px;font-weight:normal;letter-spacing:.01em}
+.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:0;border-top:1px solid var(--line)}
+.tile{position:relative;min-height:94px;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);padding:20px 28px 20px 2px;cursor:pointer;transition:background .15s,border-color .15s}
+.tile:after{content:'↗';position:absolute;right:4px;top:50%;transform:translateY(-50%);color:#9a9f94;font-size:18px;transition:transform .15s,color .15s}
+.tile:hover,.tile:focus-visible,.tile.active{outline:0;background:#ebece4}.tile:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}.tile:hover:after,.tile:focus-visible:after{transform:translate(2px,-50%);color:var(--accent)}
+.tile .ico{display:none}.tile strong{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,1.5vw,23px);font-weight:normal;display:block;letter-spacing:-.02em}.tile span:last-child{display:block;color:var(--muted);font-size:13px;margin-top:7px}
+.keyhelp{color:#8a8f85;font-size:12px;line-height:1.5;margin-top:18px}
+footer{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px;letter-spacing:.02em}footer b{color:var(--accent);font-weight:normal}
+.dialog{position:fixed;inset:0;background:#202a24b8;display:none;align-items:center;justify-content:center;padding:5vh 5vw;z-index:5;backdrop-filter:blur(5px)}.dialog.open{display:flex}
+.dialogbox{width:min(940px,100%);max-height:90vh;overflow:auto;background:var(--bg);border:1px solid #d4d5cb;border-radius:2px;padding:clamp(24px,4vw,52px);box-shadow:0 24px 90px #0002}
+.dialoghead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:22px}.dialog h2{font:normal clamp(30px,3.4vw,48px) Georgia,serif;letter-spacing:-.04em;margin:0}.close{background:transparent;border:1px solid #c9cdc2;color:var(--ink);border-radius:0;padding:10px 16px;cursor:pointer}.close:hover,.close:focus-visible{background:#e7e9df;outline:2px solid var(--accent)}
+.content{font-size:clamp(16px,1.25vw,20px);line-height:1.75;color:#535d53;padding-top:12px}.content ul{padding-left:1.2em}.content li{margin:.5em 0}.content b{color:var(--ink)}
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px;margin-top:16px}.info{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:18px 0}.info small{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:10px;margin-bottom:8px}.info strong{font-family:Georgia,serif;font-size:clamp(20px,1.8vw,27px);font-weight:normal;color:var(--ink)}
+@media(max-width:900px){main{grid-template-columns:1fr;gap:34px;padding:5vh 0 3vh}.shell{padding:24px}.topright{display:none}.lead{max-width:700px}.menu{column-gap:18px}.tile{min-height:88px}}
+@media(max-width:540px){.menu{grid-template-columns:1fr}.brandname{font-size:24px}.subtitle{font-size:10px}.info-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:6px}h1{font-size:48px}}
+@media(min-width:1500px){.shell{padding-left:6vw;padding-right:6vw}}
 </style>
 </head>
 <body>
@@ -58,24 +45,24 @@ footer b{color:var(--gold);font-weight:normal}
 </header>
 <main>
 <section>
-  <div class="eyebrow">A sua estadia, ao seu ritmo</div>
-  <h1>Bem-vindo<br>à Villa Lijó.</h1>
-  <p class="lead">Desfrute da tranquilidade da serra, da paisagem da Albufeira da Caniçada e de cada momento da sua estadia. Consulte aqui as informações úteis da casa.</p>
-  <div class="suite"><small>A sua suíte</small><strong id="suiteName">Villa Lijó Suítes</strong></div>
+  <div class="eyebrow">Um lugar para abrandar</div>
+  <h1>Bem-vindo à<br>Villa Lijó.</h1>
+  <p class="lead">Entre a serra e a Albufeira da Caniçada, descubra o prazer das coisas simples. Esperamos que desfrute de uma estadia tranquila, ao seu ritmo.</p>
+  <div class="suite"><div><small>A sua suíte</small><strong id="suiteName">Villa Lijó Suítes</strong></div></div>
 </section>
 <section>
   <div class="menu" role="navigation" aria-label="Guia digital">
     <button class="tile" data-page="welcome"><span class="ico">✦</span><strong>Informações úteis</strong><span>Horários e serviços</span></button>
-    <button class="tile" data-page="breakfast"><span class="ico">☕</span><strong>Pequeno-almoço</strong><span>Comece bem o dia</span></button>
-    <button class="tile" data-page="pool"><span class="ico">≈</span><strong>Piscina</strong><span>Horário e segurança</span></button>
-    <button class="tile" data-page="wifi"><span class="ico">⌁</span><strong>Wi-Fi</strong><span>Ligue-se à internet</span></button>
-    <button class="tile" data-page="house"><span class="ico">⌂</span><strong>Regras da casa</strong><span>Para o conforto de todos</span></button>
-    <button class="tile" data-page="geres"><span class="ico">⌁</span><strong>Descobrir o Gerês</strong><span>Natureza e experiências</span></button>
+    <button class="tile" data-page="breakfast"><span class="ico">☕</span><strong>Pequeno-almoço</strong><span>08:00 — 10:00</span></button>
+    <button class="tile" data-page="pool"><span class="ico">≈</span><strong>Piscina</strong><span>Aberta das 08:00 às 20:00</span></button>
+    <button class="tile" data-page="wifi"><span class="ico">⌁</span><strong>Wi-Fi</strong><span>Aceda à rede da casa</span></button>
+    <button class="tile" data-page="house"><span class="ico">⌂</span><strong>Regras da casa</strong><span>Para uma estadia tranquila</span></button>
+    <button class="tile" data-page="geres"><span class="ico">⌁</span><strong>Descobrir o Gerês</strong><span>Lugares e experiências</span></button>
   </div>
-  <div class="keyhelp">Utilize as setas do comando para navegar e OK para selecionar. Prima ESC ou Voltar para fechar uma janela.</div>
+  <div class="keyhelp">Use as setas do comando para navegar e OK para selecionar. Prima Voltar para regressar.</div>
 </section>
 </main>
-<footer><span>Villa Lijó Suítes · Rio Caldo, Terras de Bouro</span><span><b>Momentos de tranquilidade, em plena natureza</b></span></footer>
+<footer><span>RIO CALDO · GERÊS · PORTUGAL</span><span><b>Um refúgio entre a serra e a água</b></span></footer>
 </div>
 <div class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
  <div class="dialogbox">
