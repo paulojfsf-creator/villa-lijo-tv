@@ -1,0 +1,5 @@
+Como publicar:
+1. Abra https://github.com/paulojfsf-creator/villa-lijo-tv
+2. Carregue o index.html deste ZIP para substituir o ficheiro atual.
+3. Mantenha villa-lijo-geres.png no repositório.
+4. Faça Commit changes e aguarde a atualização do GitHub Pages.

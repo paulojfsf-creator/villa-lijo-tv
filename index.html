@@ -3,145 +3,94 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark light">
 <title>Villa Lijó Suítes | Guia Digital</title>
 <style>
-
-:root{--bg:#17211d;--ink:#fffdf7;--muted:#e0e4dc;--accent:#d6c39a;--line:#ffffff55;--white:#fffefa;--gold:#d6c39a}
+:root{--gold:#d9b66d;--ivory:#fffdf7;--line:#ffffff45}
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:#17211d;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-body{font-size:18px;letter-spacing:.005em}
-body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,rgba(13,24,19,.86) 0%,rgba(13,24,19,.66) 42%,rgba(13,24,19,.35) 100%),linear-gradient(0deg,rgba(10,18,14,.56),transparent 52%),url("villa-lijo-geres.png") center center/cover no-repeat;z-index:0}
+html,body{margin:0;min-height:100%;background:#101d17;color:var(--ivory);font-family:Arial,Helvetica,sans-serif}
+body{font-size:18px}
+.bg-slides{position:fixed;inset:0;overflow:hidden;z-index:0;background:#14241c}
+.bg-slide{position:absolute;inset:-2%;opacity:0;background-position:center;background-size:cover;animation:geresFade 36s infinite;transform:scale(1.04);filter:saturate(.86)}
+.bg-slide:nth-child(1){background-image:url("villa-lijo-geres.png");animation-delay:0s}
+.bg-slide:nth-child(2){background-image:url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=85");animation-delay:9s}
+.bg-slide:nth-child(3){background-image:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=85");animation-delay:18s}
+.bg-slide:nth-child(4){background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=85");animation-delay:27s}
+@keyframes geresFade{0%{opacity:0;transform:scale(1.04)}5%{opacity:1}23%{opacity:1}29%{opacity:0;transform:scale(1.12)}100%{opacity:0;transform:scale(1.12)}}
+body:after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(7,18,15,.83),rgba(7,18,15,.58) 45%,rgba(7,18,15,.28)),linear-gradient(0deg,rgba(5,12,9,.78),transparent 70%)}
 button{font:inherit}
-.shell{position:relative;z-index:1;min-height:100vh;max-width:1800px;margin:auto;padding:4vh 5vw 2.5vh;display:flex;flex-direction:column}
-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 20px;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:14px}.mark{display:none}.brandname{font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,2vw,35px);font-weight:normal;letter-spacing:-.035em}.subtitle{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#e0e4dc;margin-top:7px}
-.topright{display:flex;align-items:center;gap:24px;text-align:right;color:#e0e4dc;font-size:13px;line-height:1.6}.topright #clock{text-transform:capitalize;color:#fff}.weather-mini{display:flex;align-items:center;gap:10px;text-align:left;border-left:1px solid #ffffff55;padding-left:22px;min-width:190px}.weather-icon{font-size:29px;line-height:1;color:#d6c39a}.weather-temp{font-size:24px;color:#fff;font-family:Georgia,serif;line-height:1.1}.weather-place{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#e0e4dc}.weather-desc{font-size:11px;color:#e0e4dc;margin-top:3px}.weather-mini a{color:inherit;text-decoration:none}.weather-mini a:focus-visible{outline:2px solid #d6c39a;outline-offset:4px}
-.tv-mini{display:flex;flex-direction:column;gap:6px;min-width:205px;max-width:245px;padding:12px 14px;border:1px solid #ffffff55;background:rgba(17,29,23,.42);text-align:left;color:#fff;text-decoration:none}
-.tv-mini .tv-kicker{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#d6c39a}
-.tv-mini strong{font-family:Georgia,serif;font-size:17px;font-weight:normal}
-.tv-mini span:last-child{font-size:11px;line-height:1.4;color:#e0e4dc}
-.tv-mini:hover,.tv-mini:focus-visible{outline:2px solid #d6c39a;outline-offset:3px;background:rgba(255,255,255,.12)}
-@media(max-width:1100px){.topright{gap:14px}.weather-mini{padding-left:14px;min-width:160px}.tv-mini{min-width:175px;padding:10px}}
-@media(max-width:900px){.topright{display:none}}
-
-main{flex:1;display:grid;grid-template-columns:minmax(0,1.03fr) minmax(400px,.97fr);gap:6vw;align-items:center;padding:4vh 0 3vh}
-.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:bold}
-h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(52px,6vw,96px);line-height:.99;font-weight:normal;letter-spacing:-.06em;margin:22px 0 24px;max-width:760px}
+.shell{position:relative;z-index:2;min-height:100vh;max-width:1800px;margin:auto;padding:3vh 5vw 2.5vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.brandname{font-family:Georgia,serif;font-size:clamp(28px,2.4vw,42px);font-weight:normal;letter-spacing:.035em;text-transform:uppercase}
+.subtitle{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#e0e4dc;margin-top:7px}
+.topright{display:flex;align-items:center;gap:22px;text-align:right;color:#e0e4dc;font-size:13px;line-height:1.6}
+.weather-mini{display:flex;align-items:center;gap:10px;text-align:left;border-left:1px solid var(--line);padding-left:20px;color:inherit;text-decoration:none}
+.weather-icon{font-size:29px;color:var(--gold)}.weather-temp{font-size:24px;color:#fff;font-family:Georgia,serif}.weather-place{font-size:10px;text-transform:uppercase;letter-spacing:.12em}.weather-desc{font-size:11px;margin-top:3px}
+.tv-mini{display:flex;flex-direction:column;gap:6px;min-width:190px;padding:12px 14px;border:1px solid var(--line);background:#111d1780;text-align:left;color:#fff;text-decoration:none}
+.tv-mini .tv-kicker{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}.tv-mini strong{font-family:Georgia,serif;font-size:17px;font-weight:normal}.tv-mini span:last-child{font-size:11px;line-height:1.4;color:#e0e4dc}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1.03fr) minmax(400px,.97fr);gap:5vw;align-items:center;padding:4vh 0 3vh}
+.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:bold}
+h1{font-family:Georgia,serif;font-size:clamp(52px,6vw,96px);line-height:.99;font-weight:normal;letter-spacing:-.06em;margin:22px 0 24px}
 .lead{font-size:clamp(17px,1.25vw,21px);line-height:1.7;color:#f0f1eb;max-width:620px;margin:0}
-.suite{margin-top:34px;padding:0;border:0;background:none;display:flex;align-items:center;gap:16px}.suite:before{content:"";height:38px;width:1px;background:var(--gold);display:block}.suite small{display:block;color:#d8ded4;text-transform:uppercase;letter-spacing:.18em;font-size:10px;margin-bottom:5px}.suite strong{font-family:Georgia,serif;font-size:22px;font-weight:normal;letter-spacing:.01em;color:#fff}
-.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:26px;row-gap:0;border-top:1px solid var(--line);background:rgba(17,29,23,.2);backdrop-filter:blur(4px)}
-.tile{position:relative;min-height:92px;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);padding:19px 26px 18px 2px;cursor:pointer;transition:background .15s,border-color .15s}
-.tile:after{content:'↗';position:absolute;right:3px;top:50%;transform:translateY(-50%);color:#d6c39a;font-size:17px;transition:transform .15s,color .15s}
-.tile:hover,.tile:focus-visible,.tile.active{outline:0;background:rgba(255,255,255,.12)}.tile:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}.tile:hover:after,.tile:focus-visible:after{transform:translate(2px,-50%);color:#fff}
-.tile .ico{display:none}.tile strong{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,1.45vw,23px);font-weight:normal;display:block;letter-spacing:-.02em}.tile span:last-child{display:block;color:#d4dbd1;font-size:12px;margin-top:7px}
+.suite{margin-top:34px;display:flex;align-items:center;gap:16px}.suite:before{content:"";height:38px;width:1px;background:var(--gold)}.suite small{display:block;color:#d8ded4;text-transform:uppercase;letter-spacing:.18em;font-size:10px;margin-bottom:5px}.suite strong{font-family:Georgia,serif;font-size:22px;font-weight:normal;color:#fff}
+.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;border:1px solid #ffffff42;background:#0a170f70;padding:8px 20px;box-shadow:0 18px 50px #0002}
+.tile{position:relative;min-height:82px;text-align:left;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ivory);padding:15px 25px 14px 8px;cursor:pointer}
+.tile:after{content:'↗';position:absolute;right:3px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:17px}
+.tile:hover,.tile:focus-visible,.tile.active{outline:0;background:#ffffff20;box-shadow:inset 3px 0 0 var(--gold)}
+.tile strong{font-family:Georgia,serif;font-size:clamp(18px,1.45vw,23px);font-weight:normal;display:block}.tile span{display:block;color:#d4dbd1;font-size:12px;margin-top:7px}
 .keyhelp{color:#e0e4dc;font-size:11px;line-height:1.5;margin-top:16px}
-footer{border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;gap:20px;color:#e0e4dc;font-size:11px;letter-spacing:.08em}footer b{color:var(--accent);font-weight:normal}
-.dialog{position:fixed;inset:0;background:#101a15d9;display:none;align-items:center;justify-content:center;padding:5vh 5vw;z-index:5;backdrop-filter:blur(8px)}.dialog.open{display:flex}
-.dialogbox{width:min(940px,100%);max-height:90vh;overflow:auto;background:#f5f3ed;color:#202a24;border:1px solid #d4d5cb;border-radius:2px;padding:clamp(24px,4vw,52px);box-shadow:0 24px 90px #0005}
-.dialoghead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid #deded5;padding-bottom:22px}.dialog h2{font:normal clamp(30px,3.4vw,48px) Georgia,serif;letter-spacing:-.04em;margin:0}.close{background:transparent;border:1px solid #c9cdc2;color:#202a24;border-radius:0;padding:10px 16px;cursor:pointer}.close:hover,.close:focus-visible{background:#e7e9df;outline:2px solid #687b66}
-.content{font-size:clamp(16px,1.25vw,20px);line-height:1.75;color:#535d53;padding-top:12px}.content ul{padding-left:1.2em}.content li{margin:.5em 0}.content b{color:#202a24}.content a{color:#3e614a;text-decoration:underline;text-underline-offset:3px}.content a:focus-visible{outline:2px solid #687b66;outline-offset:3px}
-.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px;margin-top:16px}.info{background:transparent;border:0;border-bottom:1px solid #deded5;border-radius:0;padding:18px 0}.info small{display:block;color:#687b66;text-transform:uppercase;letter-spacing:.14em;font-size:10px;margin-bottom:8px}.info strong{font-family:Georgia,serif;font-size:clamp(20px,1.8vw,27px);font-weight:normal;color:#202a24}
-@media(max-width:900px){main{grid-template-columns:1fr;gap:30px;padding:4vh 0 3vh}.shell{padding:24px}.topright{display:none}.lead{max-width:700px}.menu{column-gap:18px}.tile{min-height:78px}}
-@media(max-width:540px){.menu{grid-template-columns:1fr}.brandname{font-size:24px}.subtitle{font-size:10px}.info-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:6px}h1{font-size:48px}}
-@media(min-width:1500px){.shell{padding-left:6vw;padding-right:6vw}}
-
+footer{border-top:1px solid var(--line);padding-top:13px;display:flex;justify-content:space-between;gap:20px;color:#e0e4dc;font-size:11px;letter-spacing:.08em}footer b{color:var(--gold);font-weight:normal}
+.dialog{position:fixed;inset:0;background:#101a15d9;display:none;align-items:center;justify-content:center;padding:5vh 5vw;z-index:5}.dialog.open{display:flex}.dialogbox{width:min(940px,100%);max-height:90vh;overflow:auto;background:#f5f3ed;color:#202a24;padding:clamp(24px,4vw,52px);box-shadow:0 24px 90px #0005}
+.dialoghead{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid #deded5;padding-bottom:22px}.dialog h2{font:normal clamp(30px,3.4vw,48px) Georgia,serif;letter-spacing:-.04em;margin:0}.close{background:transparent;border:1px solid #c9cdc2;color:#202a24;padding:10px 16px;cursor:pointer}
+.content{font-size:clamp(16px,1.25vw,20px);line-height:1.75;color:#535d53;padding-top:12px}.content ul{padding-left:1.2em}.content li{margin:.5em 0}.content b{color:#202a24}.content a{color:#3e614a;text-underline-offset:3px}
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px;margin-top:16px}.info{border-bottom:1px solid #deded5;padding:18px 0}.info small{display:block;color:#687b66;text-transform:uppercase;letter-spacing:.14em;font-size:10px;margin-bottom:8px}.info strong{font-family:Georgia,serif;font-size:clamp(20px,1.8vw,27px);font-weight:normal;color:#202a24}
+@media(max-width:1100px){.topright{gap:14px}.tv-mini{min-width:150px}}
+@media(max-width:900px){.topright{display:none}main{grid-template-columns:1fr;gap:28px;padding:4vh 0 3vh}.shell{padding:24px}.tile{min-height:74px}}
+@media(max-width:540px){.menu{grid-template-columns:1fr}.brandname{font-size:24px}.info-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:6px}h1{font-size:48px}}
+@media(prefers-reduced-motion:reduce){.bg-slide{animation:none}.bg-slide:first-child{opacity:1}}
 </style>
 </head>
 <body>
+<div class="bg-slides" aria-hidden="true"><div class="bg-slide"></div><div class="bg-slide"></div><div class="bg-slide"></div><div class="bg-slide"></div></div>
 <div class="shell">
-<header>
-  <div class="brand"><div class="mark" aria-hidden="true">L</div><div><div class="brandname">Villa Lijó Suítes</div><div class="subtitle">Gerês · Portugal</div></div></div>
-  <div class="topright">
-    <div>Bem-vindo ao Gerês<br><span id="clock"></span></div>
-    <a class="weather-mini" href="https://www.ipma.pt/pt/otempo/prev.localidade.hora/" target="_blank" rel="noopener" aria-label="Consultar meteorologia no Gerês">
-      <span class="weather-icon" id="weatherIcon">☼</span>
-      <span><span class="weather-place">Rio Caldo · Gerês</span><br><span class="weather-temp" id="weatherTemp">—°</span><br><span class="weather-desc" id="weatherDesc">A carregar meteorologia…</span></span>
-    </a>
-    <a class="tv-mini" href="https://www.meo.pt/tv/canais-programacao/guia-tv" target="_blank" rel="noopener" aria-label="Abrir guia de programação MEO">
-      <span class="tv-kicker">Agora na TV</span>
-      <strong>Guia de programação</strong>
-      <span>Consulte os programas e horários dos canais MEO ↗</span>
-    </a>
-  </div>
-</header>
-<main>
-<section>
-  <div class="eyebrow">Um lugar para abrandar</div>
-  <h1>Bem-vindo à<br>Villa Lijó.</h1>
-  <p class="lead">Entre a serra e a Albufeira da Caniçada, descubra o prazer das coisas simples. Esperamos que desfrute de uma estadia tranquila, ao seu ritmo.</p>
-  <div class="suite"><div><small>A sua suíte</small><strong id="suiteName">Villa Lijó Suítes</strong></div></div>
-</section>
-<section>
-  <div class="menu" role="navigation" aria-label="Guia digital">
-    <button class="tile" data-page="welcome"><span class="ico">✦</span><strong>Informações úteis</strong><span>Horários e serviços</span></button>
-    <button class="tile" data-page="breakfast"><span class="ico">☕</span><strong>Pequeno-almoço</strong><span>08:30 — 10:00</span></button>
-    <button class="tile" data-page="pool"><span class="ico">≈</span><strong>Piscina</strong><span>Aberta das 08:00 às 20:00</span></button>
-    <button class="tile" data-page="wifi"><span class="ico">⌁</span><strong>Wi-Fi</strong><span>Aceda à rede da casa</span></button>
-    <button class="tile" data-page="house"><span class="ico">⌂</span><strong>Regras da casa</strong><span>Para uma estadia tranquila</span></button>
-    <button class="tile" data-page="geres"><span class="ico">⌁</span><strong>Descobrir o Gerês</strong><span>Lugares e experiências</span></button>
-    <button class="tile" data-page="weather"><span class="ico">☼</span><strong>Meteorologia</strong><span>Previsão para a região</span></button>
-    <button class="tile" data-page="tv"><span class="ico">▣</span><strong>Agora na TV</strong><span>Guia de programação MEO</span></button>
-    <button class="tile" data-page="local"><span class="ico">⌖</span><strong>À mesa e por perto</strong><span>Restaurantes, cafés e bares</span></button>
-    <button class="tile" data-page="news"><span class="ico">◷</span><strong>Notícias e eventos</strong><span>O que acontece no Gerês</span></button>
-    <button class="tile" data-page="contacts"><span class="ico">✚</span><strong>Contactos úteis</strong><span>Emergência, saúde e farmácia</span></button>
-  </div>
-  <div class="keyhelp">Use as setas do comando para navegar e OK para selecionar. Prima Voltar para regressar.</div>
-</section>
-</main>
-<footer><span>RIO CALDO · GERÊS · PORTUGAL</span><span><b>Um refúgio entre a serra e a água</b></span></footer>
-</div>
-<div class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
- <div class="dialogbox">
-  <div class="dialoghead"><h2 id="dialogTitle">Informações úteis</h2><button class="close" id="closeBtn" aria-label="Fechar">Fechar ✕</button></div>
-  <div class="content" id="dialogContent"></div>
-  <div class="keyhelp">Prima Fechar, ESC ou a tecla Voltar do comando para regressar ao menu.</div>
- </div>
-</div>
+<header><div><div class="brandname">Villa Lijó Suítes</div><div class="subtitle">Gerês · Portugal</div></div>
+<div class="topright"><div>Bem-vindo ao Gerês<br><span id="clock"></span></div>
+<a class="weather-mini" href="https://www.ipma.pt/pt/otempo/prev.localidade.hora/" target="_blank" rel="noopener"><span class="weather-icon">☼</span><span><span class="weather-place">Rio Caldo · Gerês</span><br><span class="weather-temp">Consulte o tempo</span><br><span class="weather-desc">Previsão local ↗</span></span></a>
+<a class="tv-mini" href="https://www.meo.pt/tv/canais-programacao/guia-tv" target="_blank" rel="noopener"><span class="tv-kicker">Agora na TV</span><strong>Guia de programação</strong><span>Consulte os programas MEO ↗</span></a></div></header>
+<main><section><div class="eyebrow">Um lugar para abrandar</div><h1>Bem-vindo à<br>Villa Lijó.</h1><p class="lead">Entre a serra e a Albufeira da Caniçada, descubra o prazer das coisas simples. Esperamos que desfrute de uma estadia tranquila, ao seu ritmo.</p><div class="suite"><div><small>A sua suíte</small><strong id="suiteName">Villa Lijó Suítes</strong></div></div></section>
+<section><div class="menu" role="navigation" aria-label="Guia digital">
+<button class="tile" data-page="welcome"><strong>Informações úteis</strong><span>Horários e serviços</span></button>
+<button class="tile" data-page="breakfast"><strong>Pequeno-almoço</strong><span>08:30 — 10:00</span></button>
+<button class="tile" data-page="pool"><strong>Piscina</strong><span>Aberta das 08:00 às 20:00</span></button>
+<button class="tile" data-page="wifi"><strong>Wi-Fi</strong><span>Aceda à rede da casa</span></button>
+<button class="tile" data-page="house"><strong>Regras da casa</strong><span>Para uma estadia tranquila</span></button>
+<button class="tile" data-page="geres"><strong>Descobrir o Gerês</strong><span>Lugares e experiências</span></button>
+<button class="tile" data-page="weather"><strong>Meteorologia</strong><span>Previsão para a região</span></button>
+<button class="tile" data-page="tv"><strong>Agora na TV</strong><span>Guia de programação MEO</span></button>
+<button class="tile" data-page="local"><strong>À mesa e por perto</strong><span>Restaurantes, cafés e bares</span></button>
+<button class="tile" data-page="news"><strong>Notícias e eventos</strong><span>O que acontece no Gerês</span></button>
+<button class="tile" data-page="contacts"><strong>Contactos úteis</strong><span>Emergência, saúde e farmácia</span></button>
+</div><div class="keyhelp">Use as setas do comando para navegar e OK para selecionar. Prima Voltar para regressar.</div></section></main>
+<footer><span>RIO CALDO · GERÊS · PORTUGAL</span><span><b>Um refúgio entre a serra e a água</b></span></footer></div>
+<div class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"><div class="dialogbox"><div class="dialoghead"><h2 id="dialogTitle">Informações úteis</h2><button class="close" id="closeBtn">Fechar ✕</button></div><div class="content" id="dialogContent"></div><div class="keyhelp">Prima Fechar, ESC ou Voltar no comando para regressar ao menu.</div></div></div>
 <script>
-const pages = {
-welcome:{title:"Informações úteis",html:`<div class="info-grid">
-<div class="info"><small>Check-in</small><strong>15:00</strong></div>
-<div class="info"><small>Check-out</small><strong>11:00</strong></div>
-<div class="info"><small>Estacionamento</small><strong>Privado</strong></div>
-<div class="info"><small>Carregamento elétrico</small><strong>Disponível</strong></div>
-</div><p>Se precisar de ajuda durante a estadia, contacte a equipa da Villa Lijó Suítes através dos contactos fornecidos na sua reserva.</p>`},
+const pages={
+welcome:{title:"Informações úteis",html:`<div class="info-grid"><div class="info"><small>Check-in</small><strong>15:00</strong></div><div class="info"><small>Check-out</small><strong>11:00</strong></div><div class="info"><small>Estacionamento</small><strong>Privado</strong></div><div class="info"><small>Carregamento elétrico</small><strong>Disponível</strong></div></div><p>Se precisar de ajuda durante a estadia, contacte a equipa da Villa Lijó Suítes através dos contactos fornecidos na sua reserva.</p>`},
 breakfast:{title:"Pequeno-almoço",html:`<div class="info-grid"><div class="info"><small>Horário</small><strong>08:30–10:00</strong></div><div class="info"><small>Local</small><strong>Sala de pequenos-almoços</strong></div></div><p>Desfrute de um início de dia tranquilo antes de explorar o Gerês. Para pedidos especiais ou informações sobre alergénios, fale com a nossa equipa.</p>`},
-pool:{title:"Piscina",html:`<div class="info-grid"><div class="info"><small>Horário</small><strong>08:00–20:00</strong></div><div class="info"><small>Utilização</small><strong>Por sua conta e risco</strong></div></div><ul><li>As crianças devem estar sempre acompanhadas e sob vigilância de um adulto.</li><li>Não corra nem mergulhe em zonas de pouca profundidade.</li><li>Não são permitidos recipientes de vidro na zona da piscina.</li><li>Respeite o descanso dos restantes hóspedes e mantenha a área limpa.</li></ul>`},
-wifi:{title:"Wi-Fi",html:`<p>Ligação à internet disponível para os hóspedes.</p><div class="info-grid"><div class="info"><small>Rede</small><strong>Villalijosuites</strong></div><div class="info"><small>Palavra-passe</small><strong>Lijo_2026</strong></div></div><p>Selecione a rede <b>Villalijosuites</b> nas definições Wi-Fi do seu dispositivo e introduza a palavra-passe acima.</p>`},
-house:{title:"Regras da casa",html:`<ul><li><b>Silêncio:</b> entre as 22:00 e as 08:00.</li><li><b>Festas e eventos:</b> não são permitidos.</li><li><b>Fumo:</b> apenas no exterior.</li><li><b>Animais:</b> não são permitidos.</li><li>Respeite os outros hóspedes, os espaços comuns e o equipamento.</li><li>Ao sair, confirme que deixou portas e janelas devidamente fechadas.</li></ul>`},
-geres:{title:"Descobrir o Gerês",html:`<p>A Villa Lijó Suítes fica em Rio Caldo, entre a serra e a Albufeira da Caniçada.</p><ul><li><b>Albufeira da Caniçada:</b> paisagens, passeios de barco e atividades na água.</li><li><b>Parque Nacional da Peneda-Gerês:</b> trilhos e natureza. Confirme a dificuldade e as condições antes de partir.</li><li><b>São Bento da Porta Aberta:</b> santuário e património religioso.</li><li><b>Aldeias serranas:</b> arquitetura tradicional e gastronomia minhota.</li></ul><p><a href="https://www.google.com/maps/search/locais+de+interesse+Ger%C3%AAs/" target="_blank" rel="noopener">Explorar locais no mapa ↗</a></p>`},
-tv:{title:"Agora na TV · MEO",html:`<p>As televisões da Villa Lijó Suítes recebem os canais digitais MEO sem box. A página web não consegue ler diretamente o canal sintonizado nem o EPG interno da televisão; por isso, não apresenta um programa atual sem uma fonte de programação fiável.</p><div class="info-grid"><div class="info"><small>Guia de programação</small><strong><a href="https://www.meo.pt/tv/canais-programacao/guia-tv" target="_blank" rel="noopener">Abrir Guia TV MEO ↗</a></strong></div><div class="info"><small>Lista de canais sem box</small><strong><a href="https://conteudos.meo.pt/meo/documentos/listagens/listagens-meo-canais-rf.pdf" target="_blank" rel="noopener">Grelha oficial MEO ↗</a></strong></div></div><p>Também pode consultar o EPG diretamente na televisão, usando o botão Guide/EPG do comando.</p>`},
-weather:{title:"Meteorologia no Gerês",html:`<p>Consulte a previsão atualizada antes de planear trilhos, passeios de barco ou atividades ao ar livre.</p><div class="info-grid"><div class="info"><small>Previsão meteorológica</small><strong><a href="https://www.ipma.pt/pt/otempo/prev.localidade.hora/" target="_blank" rel="noopener">IPMA · previsão local ↗</a></strong></div><div class="info"><small>Previsão alternativa</small><strong><a href="https://www.google.com/search?q=meteorologia+Rio+Caldo+Ger%C3%AAs" target="_blank" rel="noopener">Tempo em Rio Caldo ↗</a></strong></div></div><p>Na serra, o tempo pode mudar rapidamente. Leve calçado adequado, água e roupa apropriada; confirme avisos meteorológicos antes de sair.</p>`},
-local:{title:"Restaurantes, cafés e bares",html:`<p>Uma seleção de locais em Rio Caldo e na vila do Gerês. Selecione um nome para abrir a localização no mapa. Horários e funcionamento podem variar consoante a época.</p><h3>Rio Caldo e São Bento da Porta Aberta</h3><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+C%C3%A1vado+Rio+Caldo" target="_blank" rel="noopener"><b>Restaurante Cávado</b> ↗</a> — cozinha portuguesa e vista para a albufeira.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+do+Rita+Rio+Caldo" target="_blank" rel="noopener"><b>Restaurante do Rita</b> ↗</a> — cozinha tradicional.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Tapiscos+Damena+Rio+Caldo" target="_blank" rel="noopener"><b>Tapiscos Damena / Café Damena</b> ↗</a> — petiscos e refeições.</li><li><a href="https://www.google.com/maps/search/?api=1&query=O+Rei+da+Batata+a+Murro+Rio+Caldo" target="_blank" rel="noopener"><b>O Rei da Batata a Murro</b> ↗</a> — refeições com vista sobre a albufeira.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Sobreiro+Rio+Caldo" target="_blank" rel="noopener"><b>Restaurante Sobreiro</b> ↗</a> — cozinha regional.</li><li><a href="https://www.google.com/maps/search/?api=1&query=O+Forno+Restaurante+Rio+Caldo" target="_blank" rel="noopener"><b>O Forno</b> ↗</a> — churrasco e grelhados.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Rio+Homem+Restaurante+Terras+de+Bouro" target="_blank" rel="noopener"><b>Rio Homem</b> ↗</a> — restaurante em Terras de Bouro.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Pizzeria+Piccolo+Mondo+Rio+Caldo" target="_blank" rel="noopener"><b>Pizzeria Piccolo Mondo</b> ↗</a> — pizzas.</li></ul><h3>Cafés e bares em Rio Caldo</h3><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+da+Ponte+Rio+Caldo" target="_blank" rel="noopener"><b>Café da Ponte</b> ↗</a> — café e esplanada.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Marina+Bar+Rio+Caldo" target="_blank" rel="noopener"><b>Marina Bar</b> ↗</a> — bar e refeições ligeiras junto à água.</li></ul><h3>Restaurantes, cafés e bares na vila do Gerês</h3><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Vai+Vai+Ger%C3%AAs" target="_blank" rel="noopener"><b>Vai... Vai Gerês</b> ↗</a> — restaurante.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Casa+Capela+Ger%C3%AAs" target="_blank" rel="noopener"><b>Casa Capela</b> ↗</a> — restaurante.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Adega+Regional+Ger%C3%AAs" target="_blank" rel="noopener"><b>Adega Regional</b> ↗</a> — cozinha portuguesa.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Universal+Ger%C3%AAs" target="_blank" rel="noopener"><b>Café Universal</b> ↗</a> — café e refeições ligeiras.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Gelataria+do+Ger%C3%AAs" target="_blank" rel="noopener"><b>Gelataria do Gerês</b> ↗</a> — gelados e sobremesas.</li><li><a href="https://www.google.com/maps/search/?api=1&query=Bar+da+Piscina+Ger%C3%AAs" target="_blank" rel="noopener"><b>Bar da Piscina</b> ↗</a> — bar.</li></ul><p>Recomendamos confirmar o horário e reservar mesa nos períodos de maior procura.</p>`},
-news:{title:"Notícias e eventos",html:`<p>Consulte fontes locais para descobrir eventos, atividades culturais e novidades no concelho.</p><div class="info-grid"><div class="info"><small>Agenda de eventos</small><strong><a href="https://eventos.cm-terrasdebouro.pt/" target="_blank" rel="noopener">Eventos de Terras de Bouro ↗</a></strong></div><div class="info"><small>Notícias locais</small><strong><a href="https://www.cm-terrasdebouro.pt/noticias" target="_blank" rel="noopener">Município · notícias ↗</a></strong></div><div class="info"><small>Gerês Ativo</small><strong><a href="https://geresativo.cm-terrasdebouro.pt/calendario/" target="_blank" rel="noopener">Atividades de natureza ↗</a></strong></div><div class="info"><small>Trilho das Bruxas</small><strong><a href="https://geres.pt/trilhodasbruxas2026/" target="_blank" rel="noopener">Informações do evento ↗</a></strong></div></div><p>As agendas são atualizadas pelas entidades locais. Confirme datas, inscrições e eventuais alterações diretamente nos sites indicados.</p>`},
-contacts:{title:"Contactos úteis",html:`<div class="info-grid"><div class="info"><small>Emergência · 112</small><strong>Polícia, bombeiros e emergência médica</strong></div><div class="info"><small>Bombeiros Voluntários de Terras de Bouro</small><strong><a href="tel:+351253350110">253 350 110</a></strong></div><div class="info"><small>GNR · Posto Territorial do Gerês</small><strong><a href="tel:+351253900100">253 900 100</a></strong></div><div class="info"><small>Centro de Saúde · Rio Caldo</small><strong><a href="tel:+351253390130">253 390 130</a></strong></div><div class="info"><small>SNS 24 · aconselhamento de saúde</small><strong><a href="tel:808242424">808 24 24 24</a></strong></div><div class="info"><small>Farmácia Entre as Pontes</small><strong><a href="tel:+351253391485">253 391 485</a></strong><p>Av. das Pontes, 184, Rio Caldo</p></div><div class="info"><small>Farmácias de serviço</small><strong><a href="https://www.jf-riocaldo.pt/" target="_blank" rel="noopener">Consultar farmácia de serviço ↗</a></strong></div><div class="info"><small>Posto de Turismo de Rio Caldo</small><strong><a href="tel:+351253391503">253 391 503</a></strong></div></div><p><b>Em caso de emergência, ligue 112.</b> Os contactos locais e horários podem mudar. Para cuidados de saúde não emergentes, contacte o SNS 24 ou confirme previamente o funcionamento do serviço.</p>`}
+pool:{title:"Piscina",html:`<div class="info-grid"><div class="info"><small>Horário</small><strong>08:00–20:00</strong></div><div class="info"><small>Utilização</small><strong>Por sua conta e risco</strong></div></div><ul><li>As crianças devem estar sempre acompanhadas por um adulto.</li><li>Não corra nem mergulhe em zonas de pouca profundidade.</li><li>Não são permitidos recipientes de vidro na zona da piscina.</li><li>Respeite o descanso dos restantes hóspedes e mantenha a área limpa.</li></ul>`},
+wifi:{title:"Wi-Fi",html:`<p>Ligação à internet disponível para os hóspedes.</p><div class="info-grid"><div class="info"><small>Rede</small><strong>Villalijosuites</strong></div><div class="info"><small>Palavra-passe</small><strong>Lijo_2026</strong></div></div><p>Selecione a rede <b>Villalijosuites</b> e introduza a palavra-passe indicada.</p>`},
+house:{title:"Regras da casa",html:`<ul><li><b>Silêncio:</b> entre as 22:00 e as 08:00.</li><li><b>Festas e eventos:</b> não são permitidos.</li><li><b>Fumo:</b> apenas no exterior.</li><li><b>Animais:</b> não são permitidos.</li><li>Respeite os outros hóspedes, os espaços comuns e o equipamento.</li></ul>`},
+geres:{title:"Descobrir o Gerês",html:`<p>A Villa Lijó Suítes fica em Rio Caldo, entre a serra e a Albufeira da Caniçada.</p><ul><li><b>Albufeira da Caniçada:</b> paisagens, passeios de barco e atividades na água.</li><li><b>Parque Nacional da Peneda-Gerês:</b> trilhos e natureza. Confirme as condições antes de partir.</li><li><b>São Bento da Porta Aberta:</b> santuário e património religioso.</li><li><b>Aldeias serranas:</b> arquitetura tradicional e gastronomia minhota.</li></ul><p><a href="https://www.google.com/maps/search/locais+de+interesse+Ger%C3%AAs/" target="_blank" rel="noopener">Explorar locais no mapa ↗</a></p>`},
+tv:{title:"Agora na TV · MEO",html:`<p>A página web não consegue ler diretamente o canal sintonizado nem o guia interno da televisão. Consulte a programação no guia oficial ou no comando da TV.</p><p><a href="https://www.meo.pt/tv/canais-programacao/guia-tv" target="_blank" rel="noopener">Abrir Guia TV MEO ↗</a></p>`},
+weather:{title:"Meteorologia no Gerês",html:`<p>Consulte a previsão atualizada antes de planear trilhos, passeios de barco ou atividades ao ar livre.</p><p><a href="https://www.ipma.pt/pt/otempo/prev.localidade.hora/" target="_blank" rel="noopener">IPMA · previsão local ↗</a></p><p><a href="https://www.google.com/search?q=meteorologia+Rio+Caldo+Ger%C3%AAs" target="_blank" rel="noopener">Tempo em Rio Caldo ↗</a></p>`},
+local:{title:"Restaurantes, cafés e bares",html:`<p>Abra os mapas para consultar localizações, horários e avaliações atualizadas.</p><h3>Rio Caldo e arredores</h3><ul><li><a href="https://www.google.com/maps/search/?api=1&query=Restaurantes+Rio+Caldo+Ger%C3%AAs" target="_blank" rel="noopener">Restaurantes em Rio Caldo ↗</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Restaurantes+S%C3%A3o+Bento+da+Porta+Aberta" target="_blank" rel="noopener">Restaurantes em São Bento da Porta Aberta ↗</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9s+e+bares+Rio+Caldo" target="_blank" rel="noopener">Cafés e bares ↗</a></li></ul>`},
+news:{title:"Notícias e eventos",html:`<p>Consulte informação atualizada sobre o concelho, eventos e condições de visita.</p><p><a href="https://www.cm-terrasdebouro.pt/" target="_blank" rel="noopener">Município de Terras de Bouro ↗</a></p><p><a href="https://www.icnf.pt/" target="_blank" rel="noopener">ICNF · avisos e informação do parque ↗</a></p>`},
+contacts:{title:"Contactos úteis",html:`<div class="info-grid"><div class="info"><small>Emergência</small><strong><a href="tel:112">112</a></strong></div><div class="info"><small>Bombeiros Voluntários de Terras de Bouro</small><strong><a href="tel:+351253350110">253 350 110</a></strong></div><div class="info"><small>GNR · Posto Territorial do Gerês</small><strong><a href="tel:+351253900100">253 900 100</a></strong></div><div class="info"><small>Centro de Saúde Rio Caldo</small><strong><a href="tel:+351253390130">253 390 130</a></strong></div><div class="info"><small>SNS 24</small><strong><a href="tel:808242424">808 24 24 24</a></strong></div><div class="info"><small>Farmácia Entre as Pontes</small><strong><a href="tel:+351253391485">253 391 485</a></strong></div><div class="info"><small>Posto de Turismo Rio Caldo</small><strong><a href="tel:+351253391503">253 391 503</a></strong></div></div><p>Farmácia de serviço: <a href="https://www.google.com/search?q=farm%C3%A1cia+de+servi%C3%A7o+Ger%C3%AAs" target="_blank" rel="noopener">consultar farmácias de serviço ↗</a></p>`}
 };
-const dialog=document.getElementById('dialog'), title=document.getElementById('dialogTitle'), content=document.getElementById('dialogContent'), closeBtn=document.getElementById('closeBtn');
-let lastFocus=null;
-function openPage(key,btn){lastFocus=btn||document.activeElement;title.textContent=pages[key].title;content.innerHTML=pages[key].html;dialog.classList.add('open');closeBtn.focus();}
-function closePage(){dialog.classList.remove('open');if(lastFocus)lastFocus.focus();}
-document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>openPage(btn.dataset.page,btn)));
-closeBtn.addEventListener('click',closePage);
-dialog.addEventListener('click',e=>{if(e.target===dialog)closePage()});
-document.addEventListener('keydown',e=>{
- if(e.key==='Escape'||e.key==='Backspace'||e.key==='BrowserBack'){if(dialog.classList.contains('open')){e.preventDefault();closePage();}}
- if(e.key==='Enter' && document.activeElement.classList.contains('tile')) document.activeElement.click();
-});
-function clock(){const now=new Date();document.getElementById('clock').textContent=now.toLocaleDateString('pt-PT',{weekday:'long',day:'numeric',month:'long'})+' · '+now.toLocaleTimeString('pt-PT',{hour:'2-digit',minute:'2-digit'});}
-clock();setInterval(clock,30000);
-// Meteorologia atual para Rio Caldo, através da API pública Open-Meteo.
-async function loadWeather(){
- const tempEl=document.getElementById('weatherTemp'), descEl=document.getElementById('weatherDesc'), iconEl=document.getElementById('weatherIcon');
- const labels={0:['Céu limpo','☀'],1:['Maioritariamente limpo','🌤'],2:['Parcialmente nublado','⛅'],3:['Nublado','☁'],45:['Nevoeiro','🌫'],48:['Nevoeiro','🌫'],51:['Chuvisco ligeiro','🌦'],53:['Chuvisco','🌦'],55:['Chuvisco intenso','🌧'],61:['Chuva ligeira','🌦'],63:['Chuva','🌧'],65:['Chuva forte','🌧'],71:['Neve ligeira','🌨'],73:['Neve','🌨'],75:['Neve forte','🌨'],80:['Aguaceiros','🌦'],81:['Aguaceiros','🌧'],82:['Aguaceiros fortes','🌧'],95:['Trovoada','⛈'],96:['Trovoada com granizo','⛈'],99:['Trovoada forte','⛈']};
- try{const r=await fetch('https://api.open-meteo.com/v1/forecast?latitude=41.67&longitude=-8.19&current=temperature_2m,weather_code,is_day&timezone=Europe%2FLisbon');if(!r.ok)throw new Error('weather unavailable');const j=await r.json();const c=j.current;const label=labels[c.weather_code]||['Condições atuais','☁'];tempEl.textContent=Math.round(c.temperature_2m)+'°C';descEl.textContent=label[0];iconEl.textContent=label[1];}
- catch(e){descEl.textContent='Consultar previsão ↗';tempEl.textContent='Gerês';iconEl.textContent='☼';}
-}
-loadWeather();setInterval(loadWeather,15*60*1000);
-// Opcional: identificar a suíte no URL, por exemplo ?suite=PONTE
-const suite=new URLSearchParams(location.search).get('suite');
-const allowed=['BUSTELO','RAPOSEIRA','FICHEIRA','PONTE','BARCA','ITEIRO','CACHOEIRA','FUNDÕES','ALVITES'];
-if(suite){const match=allowed.find(s=>s.toLowerCase()===suite.toLowerCase());if(match)document.getElementById('suiteName').textContent=match;}
+const dialog=document.getElementById('dialog'),title=document.getElementById('dialogTitle'),content=document.getElementById('dialogContent'),tiles=[...document.querySelectorAll('.tile')];let lastTile=null;
+function openPage(key,el){const p=pages[key];if(!p)return;lastTile=el;title.textContent=p.title;content.innerHTML=p.html;dialog.classList.add('open');document.getElementById('closeBtn').focus()}
+function closePage(){dialog.classList.remove('open');if(lastTile)lastTile.focus()}
+tiles.forEach((tile,i)=>{tile.addEventListener('click',()=>openPage(tile.dataset.page,tile));tile.addEventListener('keydown',e=>{let n=null;if(['ArrowRight','ArrowDown'].includes(e.key))n=tiles[(i+1)%tiles.length];if(['ArrowLeft','ArrowUp'].includes(e.key))n=tiles[(i-1+tiles.length)%tiles.length];if(n){e.preventDefault();n.focus()}})});
+document.getElementById('closeBtn').addEventListener('click',closePage);document.addEventListener('keydown',e=>{if(['Escape','Backspace'].includes(e.key)&&dialog.classList.contains('open')){e.preventDefault();closePage()}});dialog.addEventListener('click',e=>{if(e.target===dialog)closePage()});
+function clock(){const d=new Date();document.getElementById('clock').textContent=d.toLocaleDateString('pt-PT',{weekday:'long',day:'numeric',month:'long'})+' · '+d.toLocaleTimeString('pt-PT',{hour:'2-digit',minute:'2-digit'})}clock();setInterval(clock,30000);
 </script>
-</body>
-</html>
+</body></html>
