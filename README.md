@@ -1,29 +1,27 @@
 # Villa Lijó Suítes — Guia Digital TV
 
-Ecrã de boas-vindas cinematográfico para televisão, com fotografias locais do Gerês em rotação lenta e navegação por comando.
+Ecrã panorâmico de boas-vindas inspirado na referência visual da Villa Lijó: paisagens rotativas do Gerês, relógio e meteorologia no topo, acesso rápido ao guia MEO e sete cartões fotográficos com navegação por comando.
 
-## Conteúdo
+## O que inclui
 
-- Fundo rotativo com paisagens do Parque Nacional da Peneda-Gerês e fotografia da Villa.
-- Informações úteis, pequeno-almoço (08:30–10:00), piscina e Wi-Fi (`Villalijosuites` / `Lijo_2026`).
-- Regras da casa e sugestões para descobrir o Gerês.
-- Meteorologia, guia de programação MEO, restaurantes, cafés, bares, notícias e eventos através de ligações atualizadas.
-- Contactos úteis, incluindo GNR Gerês: **253 900 100**.
-- Navegação com setas, OK e tecla Voltar do comando da TV.
+- Fundo rotativo com fotografias locais do Gerês e da Villa.
+- Acessos rápidos a boas-vindas, Gerês, restaurantes, trilhos, MEO, contactos e Wi-Fi.
+- Guia completo com pequeno-almoço (08:30–10:00), piscina, regras, meteorologia, eventos e contactos úteis.
+- Wi-Fi: `Villalijosuites` · palavra-passe: `Lijo_2026`.
+- GNR Gerês: **253 900 100**.
+- Navegação por setas, OK e Voltar no comando da TV.
 
 ## Publicar no GitHub Pages
 
 1. Extraia o ZIP completo.
-2. Copie o conteúdo desta pasta para a raiz do repositório `villa-lijo-tv`, mantendo a pasta `assets`.
-3. Faça commit dos ficheiros e aguarde a publicação do GitHub Pages.
-4. Abra `https://paulojfsf-creator.github.io/villa-lijo-tv/` na TV.
+2. Carregue `index.html`, a pasta `assets` e os ficheiros de instruções para a raiz do repositório `villa-lijo-tv`.
+3. Faça commit das alterações e aguarde a publicação do GitHub Pages.
+4. Reabra a página nas TVs.
 
-O ecrã inicial usa ficheiros locais para todas as imagens. Não depende de carregamento de fotografias externas para as transições de fundo.
+Mantenha a pasta `assets` ao lado do `index.html`. As imagens de fundo são locais para carregar de forma fiável no navegador da TV.
 
-## Imagens e licenças
+## Imagens e nota
 
-Três fotografias do Wikimedia Commons são de José Amorim e Andre Rodrigues83, licenciadas sob CC BY-SA 4.0. As ligações e créditos completos estão no rodapé do ecrã e em `IMAGE-CREDITS.txt`. A imagem da Villa já fazia parte do repositório.
+As fotografias do Gerês são de José Amorim e Andre Rodrigues83, do Wikimedia Commons, com licença CC BY-SA 4.0. A atribuição completa está em `IMAGE-CREDITS.txt`. A imagem da Villa já fazia parte do repositório.
 
-## Nota
-
-Meteorologia, programação MEO, horários comerciais, notícias, eventos e mapas abrem fontes externas atualizadas. A meteorologia e a programação não são lidas diretamente pela aplicação.
+A meteorologia, a programação MEO, os horários comerciais, as notícias, os eventos e os mapas abrem fontes externas atualizadas. A aplicação não lê o canal da TV nem mostra informação meteorológica em tempo real dentro do painel.

@@ -1,10 +1,14 @@
-Fotografias locais usadas como fundos rotativos:
+IMAGENS DE FUNDO LOCAIS
+
 - Paisagem do Parque Nacional da Peneda - Gerês 01.jpg — José Amorim
   https://commons.wikimedia.org/wiki/File:Paisagem_do_Parque_Nacional_da_Peneda_-_Ger%C3%AAs_01.jpg
 - Paisagem do Parque Nacional da Peneda - Gerês 05.jpg — José Amorim
   https://commons.wikimedia.org/wiki/File:Paisagem_do_Parque_Nacional_da_Peneda_-_Ger%C3%AAs_05.jpg
 - Serras no Parque Nacional Peneda-Gerês.jpg — Andre Rodrigues83
   https://commons.wikimedia.org/wiki/File:Serras_no_Parque_Nacional_Peneda-Ger%C3%AAs.jpg
-Licença das três fotografias: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+Estas três imagens são partilhadas sob a licença Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0):
 https://creativecommons.org/licenses/by-sa/4.0/
-As fotografias foram redimensionadas para 1920 px de largura e usadas como fundos com recorte e transição gradual.
+Foram redimensionadas para 1600 px de largura para utilização no ecrã da TV.
+
+A quarta imagem, Villa Lijó, já fazia parte do repositório villa-lijo-tv e foi convertida de PNG para JPEG e redimensionada para 1600 px.

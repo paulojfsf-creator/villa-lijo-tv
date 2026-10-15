@@ -1,3 +1,3 @@
-Guia digital Villa Lijó Suítes para TV.
-O ZIP deve ser extraído completo. Mantenha a pasta assets no mesmo nível que index.html.
-Consulte README.md para instruções de publicação e IMAGE-CREDITS.txt para a atribuição das fotografias.
+Guia digital da Villa Lijó Suítes para TV.
+Extraia o ZIP completo e mantenha a pasta assets ao lado de index.html.
+Consulte README.md para instruções de publicação e IMAGE-CREDITS.txt para atribuição das fotografias.
