@@ -12,3 +12,8 @@ https://creativecommons.org/licenses/by-sa/4.0/
 Foram redimensionadas para 1600 px de largura para utilização no ecrã da TV.
 
 A quarta imagem, Villa Lijó, já fazia parte do repositório villa-lijo-tv e foi convertida de PNG para JPEG e redimensionada para 1600 px.
+
+Meteorologia: API de dados abertos do IPMA (https://api.ipma.pt/); observação da estação Terras de Bouro/Barral (CIM) e previsão diária da localização mais próxima disponível.
+
+Meteorologia: dados abertos do IPMA (https://api.ipma.pt/). Temperatura da estação Terras de Bouro/Barral (CIM) e previsão diária do local IPMA mais próximo.
+Logótipo: wordmark tipográfico recriado a partir do nome e da composição visual oficiais da Villa Lijó Suítes, sem símbolo adicional.

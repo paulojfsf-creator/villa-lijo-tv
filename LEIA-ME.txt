@@ -1,10 +1,12 @@
 VILLA LIJÓ SUÍTES — GUIA DIGITAL PARA TV
 
 O ZIP inclui a aplicação completa e a pasta assets com fotografias locais.
-Extraia o ZIP e carregue index.html, a pasta assets e os ficheiros de instruções para a raiz do repositório villa-lijo-tv.
+Extraia o ZIP e carregue index.html, as pastas assets, data, scripts e .github, e os ficheiros de instruções para a raiz do repositório villa-lijo-tv.
 Mantenha a pasta assets no mesmo nível que index.html e faça commit das alterações.
 
 Pequeno-almoço: 08:30–10:00 | Wi-Fi: Villalijosuites | Palavra-passe: Lijo_2026
 GNR Gerês: 253 900 100
 
 Consulte IMAGE-CREDITS.txt para licenças e atribuição das fotografias.
+
+Para obter a programação MEO logo após o carregamento, abra Actions > Atualizar guia MEO > Run workflow. Depois, o GitHub atualiza o guia diariamente. O workflow incluído em .github/workflows/update-meo-guide.yml grava data/meo-guide.json no repositório. A atualização manual também está disponível através do script scripts/update-meo-guide.py num computador com Python.
