@@ -1,5 +1,10 @@
-Como publicar:
-1. Abra https://github.com/paulojfsf-creator/villa-lijo-tv
-2. Carregue o index.html deste ZIP para substituir o ficheiro atual.
-3. Mantenha villa-lijo-geres.png no repositório.
-4. Faça Commit changes e aguarde a atualização do GitHub Pages.
+VILLA LIJÓ SUÍTES — GUIA DIGITAL TV
+
+O ZIP inclui a aplicação completa e a pasta assets com as fotografias locais.
+Para publicar, copie todos os ficheiros e a pasta assets para a raiz do repositório villa-lijo-tv e aguarde o GitHub Pages.
+
+Inclui navegação por comando, serviços para hóspedes, meteorologia, guia MEO, locais, eventos e contactos úteis.
+Pequeno-almoço: 08:30–10:00 | Wi-Fi: Villalijosuites | Palavra-passe: Lijo_2026
+GNR Gerês: 253 900 100
+
+Consulte IMAGE-CREDITS.txt para as licenças e atribuição das imagens.
