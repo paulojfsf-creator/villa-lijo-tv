@@ -1,12 +1,7 @@
-VILLA LIJÓ SUÍTES — GUIA DIGITAL PARA TV
+Villa Lijó Suítes — atualização de contactos úteis
 
-Esta versão inclui a secção “Contactos úteis”, com emergência 112, Bombeiros, GNR, Centro de Saúde de Rio Caldo, SNS 24, Farmácia Entre as Pontes, farmácias de serviço e Posto de Turismo.
+Substitua o index.html existente no repositório GitHub por este index.html.
+Mantenha também a imagem villa-lijo-geres.png já existente no repositório.
+Faça Commit changes e aguarde a publicação do GitHub Pages.
 
-PUBLICAÇÃO NO GITHUB PAGES
-1. Extraia este ZIP.
-2. Substitua o index.html no repositório GitHub pelo index.html incluído.
-3. Mantenha no repositório os restantes recursos já existentes, em particular villa-lijo-geres.png, se continuar a ser usado pelo site.
-4. Faça Commit changes e teste o site no navegador de uma televisão Toshiba.
-
-NOTA IMPORTANTE
-Os contactos e horários podem mudar. O 112 é o número de emergência. Confirme periodicamente os contactos locais e os horários das farmácias. O link de farmácias de serviço aponta para o site da Junta de Freguesia de Rio Caldo.
+Atualização: GNR — Posto Territorial do Gerês, 253 900 100.
